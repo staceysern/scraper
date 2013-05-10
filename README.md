@@ -27,6 +27,8 @@ Run the scraper: cd $SCRAPER_HOME; python manage.py crawl &lt;url>
 
 Start the admin interface: cd $SCRAPER_HOME; python manage.py runserver
 
+View the admin interface: http://localhost:8000/admin
+
 Cleanup
 -------
 
