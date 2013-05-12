@@ -19,7 +19,7 @@ Invocation
 
 Set environment variables: . ./setup 
 
-Start RabbitMQ: sudo /usr/local/Cellar/rabbitmq/3.0.4/sbin/rabbitmq-server
+Start RabbitMQ: sudo rabbitmq-server
 
 Start Celery: cd $SCRAPER_HOME/scraper; celery -A tasks worker --loglevel=info
 
@@ -34,7 +34,7 @@ Cleanup
 
 Stop Celery Tasks: celeryctl purge
 
-Stop RabbitMQ: sudo /usr/local/Cellar/rabbitmq/3.0.4/sbin/rabbitmqctl stop
+Stop RabbitMQ: sudo rabbitmqctl stop
 
 Testing
 -------
