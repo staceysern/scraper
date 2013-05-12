@@ -31,9 +31,9 @@ def crawl(start):
     # Use a bloom filter to keep track of urls which have been crawled.
     # This offers fast determination of set membership.  A negative result is
     # always correct but a positive result may be incorrent in which case a
-    # page would be fetched more than once.  This filter is sized to hold
-    # 100,000 items with an error rate of less than 1 percent.
-    crawled = pybloomfilter.BloomFilter(100000, 0.01, "/tmp/"+domain+tld)
+    # page would not not be crawled.  This filter is sized to hold 100,000 
+    # items with an error rate of less than .1 percent.
+    crawled = pybloomfilter.BloomFilter(100000, 0.001, "/tmp/"+domain+tld)
 
     frontier = [start]
 
